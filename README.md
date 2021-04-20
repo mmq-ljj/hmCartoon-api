@@ -16,89 +16,113 @@ yarn dev 启动项目
 
 ## 一.登录页面：
 
-登录验证用户
+#### 1.1登录验证用户（没变）
+
 /user/search---------/login
 
+```
 {
-msg: "登录成功",
-status: 200,
-token,
+    msg: "登录成功",
+    status: 200,
+    token,
 }
+```
 
-注册用户信息
+
+
+#### 1.2注册用户信息（没变）
+
 /user/add ----------/login/reg
 
-## 二.排行榜的接口没变
+## 二.排行榜的接口
 
-**总表单**
+#### **2.1总表单**（没变）
+
 /rank/all
 
+```
 {
-status: 200,
-msg: "获取成功",
-list: ListAllArr,
-little: popularityLists,
+    status: 200,
+    msg: "获取成功",
+    list: ListAllArr,
+    little: popularityLists,
 }
+```
 
-**少女榜**
-/rank/girl
 
+
+#### **2.2少女榜**(没变)：/rank/girl
+
+```
 {
 status: 200,
 msg: "获取成功",
 list: girlLists,
 }
+```
 
-**青女榜**
-/rank/yongGirl
+
+
+#### 2.3青女榜(没变)：/rank/yongGirl
+
+```
 {
-status: 200,
-msg: "获取成功",
-list: yongGirllists,
+    status: 200,
+    msg: "获取成功",
+    list: yongGirllists,
 }
+```
 
-**少年榜**
-/rank/yong
 
+
+#### **2.4少年榜**(没变)：/rank/yong
+
+```
 {
-status: 200,
-msg: "获取成功",
-list: yongLists,
+    status: 200,
+    msg: "获取成功",
+    list: yongLists,
 }
+```
 
-## 三.分类接口没变
 
-**分页**
-/**paging/img 
 
+## 三.分类页面接口
+
+#### **3.1分页**(没变)：/paging/img 
+
+```
 {
-status: 200,
- msg: '获取数据成功',
-  pag: list,
- total: totals,
+    status: 200,
+    msg: '获取数据成功',
+    pag: list,
+    total: totals,
  }
+```
 
-**收藏**
+#### **3.2收藏**(没变)：/paging/collection
 
-/paging/collection
-
+```
 {
     msg: 收藏成功,
     status: 200,
 }
+```
 
-**取消收藏**
 
-/paging/collectionDec
 
+#### **3.3取消收藏(没变)：**/paging/collectionDec
+
+```
 {
     msg: 取消收藏成功,
     status: 200,
 }
+```
 
-**查找分类**
 
-/paging/sort
+
+#### **3.4查找分类**(没变)：/paging/sort
 
 ```
 {
@@ -149,7 +173,7 @@ status: 200,
 }
 ```
 
-#### **4.3 删除评论接口**（没变）
+#### **4.3 删除评论接口(没变)：**/world/delete
 
 **请求方式：**delete
 
