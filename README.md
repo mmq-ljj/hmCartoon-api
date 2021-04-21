@@ -14,7 +14,7 @@ yarn dev 启动项目
 
 ### api 请求地址的变化
 
-## 一.登录页面：
+## 1.登录页面：
 
 #### 1.1登录验证用户（没变）
 
@@ -34,7 +34,7 @@ yarn dev 启动项目
 
 /user/add ----------/login/reg
 
-## 二.排行榜的接口
+## 2.排行榜的接口
 
 #### **2.1总表单**（没变）
 
@@ -87,7 +87,7 @@ list: girlLists,
 
 
 
-## 三.分类页面接口
+## 3.分类页面接口
 
 #### **3.1分页**(没变)：/paging/img 
 
@@ -134,15 +134,15 @@ list: girlLists,
 }
 ```
 
-## 四.世界页面接口：
+## 4.世界页面接口：
 
-#### **4.1 获取已有评论接口**(没变)：/world/getComment
+#### 4.1 获取已有评论接口：/world/getComment
 
-**请求方式：**get
+请求方式：get
 
-**传入参数：**无
+传入参数：无
 
-**返回值：**
+返回值：
 
 ```
 {
@@ -152,9 +152,9 @@ list: girlLists,
 }	
 ```
 
-#### **4.2 发表评论接口**(没变)：/world/public
+#### 4.2 发表评论接口：/world/public
 
-**请求方式：**post
+请求方式：post
 
 | 传入参数名 | 参数描述       |
 | ---------- | :------------- |
@@ -163,7 +163,7 @@ list: girlLists,
 | publicTime | 发表评论时间   |
 | url        | 头像图片地址   |
 
-**返回值**
+返回值
 
 ```
 {
@@ -173,13 +173,13 @@ list: girlLists,
 }
 ```
 
-#### **4.3 删除评论接口(没变)：**/world/delete
+#### 4.3 删除评论接口：/world/delete
 
-**请求方式：**delete
+请求方式：delete
 
-| 传入参数名 | 参数描述       |
-| :--------- | -------------- |
-| id         | 被删除评论的id |
+| 传入参数 | 参数描述       |
+| :------- | -------------- |
+| id       | 被删除评论的id |
 
 **返回值**
 
@@ -191,5 +191,71 @@ list: girlLists,
 }
 ```
 
+## 5.热门推荐页面接口
 
+#### 5.1 获取漫画简介及章节列表：/works/chapterList
+
+请求方式：get
+
+传入参数：无
+
+**返回值**
+
+```
+{
+      status: 200,
+      msg: "获取成功",
+      chapterList,     // 漫画章节
+      describe,        // 漫画描述
+      ifFlag                        
+ }
+```
+
+## 6.观看漫画页面接口
+
+#### 6.1获取每一章漫画图片：/look
+
+请求方式：get
+
+| 传入参数 | 参数描述 |
+| -------- | -------- |
+| title    | 章节名称 |
+
+返回值
+
+```
+{
+     status: 200,
+     msg: "获取成功",
+     cartoonImg,            // 漫画图片地址列表
+     sidebarList            // 侧边栏章节
+ }
+```
+
+## 7.首页接口
+
+#### 7.1获取首页图片：/home/getAll
+
+请求方式：get
+
+传入参数：无
+
+返回值
+
+```
+{
+   status: 200,
+   msg: "获取成功",
+   allData:{
+               carouselList:[],           // 轮播图
+               originalImgList:[],        // 原创数据与图片源
+               suspenseImgsList:[],       // 惊恐数据与图片源
+               newWorkImgsList:[],        // 新作榜
+               riseWorkImgsList:[],       // 飙升榜
+               cartoonChangeImgsList:[],  // 漫改图片
+               toHeadImgsList:[],         // 上头图片
+               toHeadPopularityList:[]    // 上头排行榜
+       }
+ }
+```
 
