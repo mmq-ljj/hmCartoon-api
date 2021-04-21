@@ -30,29 +30,7 @@ router.get('/', (req, res) => {
 })
 
 
-let Chapter = new cartoonImgModel({
-    title: '序章 硝烟域泪',
-    chapter: 0,
-    imgList: [
-        { url: ' http://localhost:5000/public/imgs/001.jpg', },
-        { url: ' http://localhost:5000/public/imgs/002.jpg', },
-        { url: ' http://localhost:5000/public/imgs/003.jpg', },
-        { url: ' http://localhost:5000/public/imgs/004.jpg', },
-        { url: ' http://localhost:5000/public/imgs/005.jpg', },
-        { url: ' http://localhost:5000/public/imgs/006.jpg', },
-        { url: ' http://localhost:5000/public/imgs/007.jpg', },
-        { url: ' http://localhost:5000/public/imgs/008.jpg', },
-        { url: ' http://localhost:5000/public/imgs/009.jpg', },
-        { url: ' http://localhost:5000/public/imgs/010.jpg', },
-        { url: ' http://localhost:5000/public/imgs/011.jpg', },
-        { url: ' http://localhost:5000/public/imgs/012.jpg', },
-        { url: ' http://localhost:5000/public/imgs/013.jpg', },
-        { url: ' http://localhost:5000/public/imgs/014.jpg', },
-        { url: ' http://localhost:5000/public/imgs/015.jpg', },
-        { url: ' http://localhost:5000/public/imgs/016.jpg', },
-        { url: ' http://localhost:5000/public/imgs/017.jpg', },
-    ]
-})
+// let Chapter = new cartoonImgModel()
 
 // Chapter.save((err, res) => {
 //     if (err) {
